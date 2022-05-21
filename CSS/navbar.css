@@ -1,0 +1,122 @@
+:root {
+  --ast-global-color-0: #ffffff;
+  --ast-global-color-1: #000000;
+  --ast-global-color-2: #eff2f3;
+  --ast-global-color-4: #f4f6f6;
+  --ast-global-color-5: #075aae;
+  --ast-global-color-6: #067ae0;
+  --ast-global-color-7: #424242;
+}
+
+nav {
+  background: var(--ast-global-color-0);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  margin: 1rem;
+}
+
+.nav-item-container {
+  max-width: 1235px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  margin-right: 1rem;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: var(--ast-global-color-1);
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+a.active,
+a:hover {
+  color: var(--ast-global-color-5);
+  transition: all 0.2s linear;
+}
+
+.hamburger {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--ast-global-color-5);
+  gap: 4px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  margin-right: 1rem;
+}
+
+#check {
+  display: none;
+}
+
+.hamburger-line {
+  width: 40%;
+  height: 1.5px;
+  background-color: var(--ast-global-color-0);
+}
+
+@media (max-width: 920px) {
+  .hamburger {
+    display: flex;
+  }
+
+  ul {
+    position: fixed;
+    width: 100vw;
+    top: 90px;
+    transition: all 0.5s;
+    margin: 0;
+    display: none;
+  }
+
+  nav ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.171);
+  }
+
+  nav ul li a {
+    color: var(--ast-global-color-1);
+    font-size: 0.912rem;
+    padding: 0 1rem;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    display: block;
+  }
+
+  #check:checked ~ .hamburger .hamburger-line:nth-child(1) {
+    transform: translateY(376%) rotate(45deg);
+  }
+
+  #check:checked ~ .hamburger .hamburger-line:nth-child(2) {
+    transform: scale(0);
+  }
+
+  #check:checked ~ .hamburger .hamburger-line:nth-child(3) {
+    transform: translateY(-376%) rotate(-45deg);
+  }
+}

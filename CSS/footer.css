@@ -1,0 +1,48 @@
+:root {
+  --ast-global-color-0: #ffffff;
+  --ast-global-color-1: #000000;
+  --ast-global-color-2: #eff2f3;
+  --ast-global-color-4: #f4f6f6;
+  --ast-global-color-5: #075aae;
+  --ast-global-color-6: #067ae0;
+  --ast-global-color-7: #424242;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ast-global-color-4);
+  align-items: center;
+  justify-content: center;
+}
+footer .help {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  justify-content: center;
+  background: var(--ast-global-color-5);
+  color: white;
+  padding: 6vmax 4vmax 8vmax 4vmax;
+}
+
+footer h2 {
+  width: 660px;
+  font-weight: 400;
+  text-align: center;
+}
+
+footer .copyright-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+@media (max-width: 545px) {
+  .copyright-container {
+    flex-direction: column;
+  }
+}

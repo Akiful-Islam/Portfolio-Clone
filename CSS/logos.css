@@ -1,0 +1,38 @@
+:root {
+  --ast-global-color-0: #ffffff;
+  --ast-global-color-1: #000000;
+  --ast-global-color-2: #eff2f3;
+  --ast-global-color-4: #f4f6f6;
+  --ast-global-color-5: #075aae;
+  --ast-global-color-6: #067ae0;
+  --ast-global-color-7: #424242;
+}
+
+#logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+  background: var(--ast-global-color-4);
+}
+
+#logos .logo-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  margin: 2rem;
+}
+@media (max-width: 950px) {
+  #logos .logo-container {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  #logos .logo-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
